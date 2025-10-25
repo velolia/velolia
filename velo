@@ -1,0 +1,11 @@
+#!/usr/bin/env php
+<?php
+
+use Velolia\Console\ArgvInput;
+use Velolia\Foundation\Application;
+
+require __DIR__ . '/vendor/autoload.php';
+
+$app = new Application();
+$result = $app->handleCommand($argv);
+exit($result);
