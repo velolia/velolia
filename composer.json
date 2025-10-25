@@ -19,5 +19,7 @@
             "App\\": "app/",
             "Database\\Seeders\\": "database/seeders/"
         }
-    }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
