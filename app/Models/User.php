@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Velolian\Database\Eloquent\Model;
+use Velolia\Database\Eloquent\Model;
 
 class User extends Model
 {
