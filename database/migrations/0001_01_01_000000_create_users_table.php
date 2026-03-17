@@ -1,8 +1,8 @@
 <?php
 
-use Velolia\Database\Migration\Migration;
 use Velolia\Database\Schema\Blueprint;
-use Velolia\Support\Facades\Schema;
+use Velolia\Support\Schema\Schema;
+use Velolia\Database\Migration;
 
 return new class extends Migration
 {
