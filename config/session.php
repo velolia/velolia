@@ -5,7 +5,7 @@ return [
     'lifetime' => 120,
     'expire_on_close' => false,
     'files' => base_path('storage/framework/sessions'),
-    'name' => 'velolia_session',
+    'name' => 'velolia-session',
     'path' => '/',
     'domain' => null,
     'secure' => false,

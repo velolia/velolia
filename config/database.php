@@ -1,21 +1,25 @@
 <?php
 
 return [
-    'default' => 'mysql',
+    'default' => env('DB_CONNECTION', 'mysql'),
+
     'connections' => [
-        'mysql' => [
-            'driver' => 'mysql',
-            'host' => '127.0.0.1',
-            'port' => '3306',
-            'username' => 'root',
-            'password' => '',
-            'database' => 'velolia',
-            'charset' => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-        ],
         'sqlite' => [
             'driver'   => 'sqlite',
-            'database' => base_path('/database/database.sqlite'),
+            'database' => env('DB_DATABASE', __DIR__ . '/../storage/database.sqlite'),
+            'prefix'   => '',
+        ],
+
+        'mysql' => [
+            'driver'    => 'mysql',
+            'host'      => env('DB_HOST', '127.0.0.1'),
+            'port'      => env('DB_PORT', '3306'),
+            'database'  => env('DB_DATABASE', 'velolia'),
+            'username'  => env('DB_USERNAME', 'root'),
+            'password'  => env('DB_PASSWORD', ''),
+            'charset'   => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+            'prefix'    => '',
         ],
     ],
 ];

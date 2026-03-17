@@ -1,9 +1,11 @@
 <?php
 
-use Velolia\Foundation\Application;
 use Velolia\Http\Request;
+
+define('VELOLIA_START', microtime(true));
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$app = new Application();
+$app = require_once __DIR__ . '/../bootstrap/app.php';
+
 $app->handleRequest(Request::capture());

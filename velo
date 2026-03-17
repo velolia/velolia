@@ -1,11 +1,11 @@
 #!/usr/bin/env php
 <?php
 
-use Velolia\Console\ArgvInput;
-use Velolia\Foundation\Application;
+use Velolia\Console\Console;
 
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__.'/vendor/autoload.php';
 
-$app = new Application();
-$result = $app->handleCommand($argv);
-exit($result);
+$app = require_once __DIR__.'/bootstrap/app.php';
+$console = new Console($app);
+$status = $console->handle($argv);
+exit($status);
