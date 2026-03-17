@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Database\Seeders;
 
-use Velolia\Database\Seeders\Seeder;
+use Velolia\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
