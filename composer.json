@@ -1,6 +1,7 @@
 {
+    "$schema": "https://getcomposer.org/schema.json",
     "name": "velolia/velolia",
-    "description": "Velolia Web Framework",
+    "description": "Velolia Web Application",
     "type": "project",
     "keywords": ["velolia", "framework"],
     "license": "MIT",
@@ -12,13 +13,21 @@
     ],
     "require": {
         "php": "^8.3",
-        "velolia/framework": "*"
+        "velolia/framework": "^1.0"
     },
     "autoload": {
         "psr-4": {
             "App\\": "app/",
             "Database\\Seeders\\": "database/seeders/"
         }
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php velo key:generate"
+        ]
     },
     "minimum-stability": "stable",
     "prefer-stable": true
